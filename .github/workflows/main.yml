@@ -30,11 +30,11 @@ jobs:
           SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
         run: python newfile.py
               
-      - name: Salvar ofertas no GitHub
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add ofertas_prontas.txt ofertas_enviadas.json
-          git commit -m "Atualizar ofertas" || echo "Nada novo para salvar"
-          git pull --rebase origin main
-          git push
+      - name: Salvar ofertas no GitHub 
+      run: |
+        git config --global user.name "github-actions"
+        git config --global user.email "github-actions@github.com"
+        git add ofertas_prontas.txt ofertas_enviadas.json
+        git commit -m "Atualizar ofertas" || echo "Nada para atualizar"
+        git pull --rebase origin main
+        git push origin main
