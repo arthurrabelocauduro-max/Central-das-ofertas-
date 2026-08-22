@@ -36,4 +36,5 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git add ofertas_prontas.txt ofertas_enviadas.json
           git commit -m "Atualizar ofertas" || echo "Nada novo para salvar"
+          git pull --rebase origin main
           git push
