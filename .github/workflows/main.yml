@@ -28,12 +28,12 @@ jobs:
         env:
           ID_DO_APLICATIVO_SHOPEE: ${{ secrets.SHOPEE_APP_ID }}
           SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
-         run: |
-           echo "Arquivos encontrados:"
-           ls -la
-           echo "Procurando novoarquivo.py:"
-           find . -name "novoarquivo.py" -type f
-           python ./novoarquivo.py
+        run: |
+          echo "Arquivos encontrados:"
+          ls -la
+          echo "Procurando novoarquivo.py:"
+          find . -name "novoarquivo.py" -type f
+          python ./novoarquivo.py
 
       - name: Salvar ofertas no GitHub
         run: |
