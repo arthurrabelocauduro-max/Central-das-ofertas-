@@ -28,7 +28,7 @@ jobs:
         env:
           ID_DO_APLICATIVO_SHOPEE: ${{ secrets.SHOPEE_APP_ID }}
           SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
-        run: python newfile.py 
+        run: python novoarquivo.py 
 
       - name: Salvar ofertas no GitHub
         run: |
