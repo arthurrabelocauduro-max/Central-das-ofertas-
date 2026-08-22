@@ -28,17 +28,12 @@ jobs:
         env:
           ID_DO_APLICATIVO_SHOPEE: ${{ secrets.SHOPEE_APP_ID }}
           SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
-        run: |
-          echo "Arquivos encontrados:"
-          ls -la
-          echo "Procurando novoarquivo.py:"
-          find . -name "novoarquivo.py" -type f
-          python ./novoarquivo.py
+        run: python novoarquivo.py
 
       - name: Salvar ofertas no GitHub
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "41098202+github-actions[bot]@users.noreply.github.com"
           git add -A
           git diff --cached --quiet || git commit -m "Atualizar ofertas"
           git push
