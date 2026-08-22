@@ -399,46 +399,20 @@ def processar_ofertas():
 def iniciar():
 
     print("\n")
-    print(
-        "🚀 CENTRAL DAS OFERTAS INICIADA!"
-    )
-
-    print(
-        f"⏰ Busca automática a cada "
-        f"{INTERVALO_MINUTOS} minutos."
-    )
-
+    print("🚀 CENTRAL DAS OFERTAS INICIADA!")
+    print("🔎 Executando uma rodada de busca...")
     print(
         f"🛍️ Até {MAX_OFERTAS_POR_RODADA} "
         "ofertas novas por rodada."
     )
 
-    print(
-        "\nPressione CTRL + C para parar.\n"
-    )
+    processar_ofertas()
 
-    while True:
+    print("\n✅ Rodada concluída!")
 
-        processar_ofertas()
 
-        print(
-            f"\n😴 Aguardando "
-            f"{INTERVALO_MINUTOS} minutos..."
-        )
-
-        try:
-
-            time.sleep(
-                INTERVALO_MINUTOS * 60
-            )
-
-        except KeyboardInterrupt:
-
-            print(
-                "\n\n🛑 Sistema encerrado."
-            )
-
-            break
+if __name__ == "__main__":
+    iniciar()
 
 
 # ==================================================
