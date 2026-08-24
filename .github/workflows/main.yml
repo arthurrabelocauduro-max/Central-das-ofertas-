@@ -32,7 +32,7 @@ jobs:
           SHOPEE_APP_ID: ${{ secrets.SHOPEE_APP_ID }}
           SHOPEE_SECRET: ${{ secrets.SHOPEE_SECRET }}
         run: |
-          python novoarquivo.py
+          python newfile.py
 
       - name: Salvar histórico no GitHub
         run: |
